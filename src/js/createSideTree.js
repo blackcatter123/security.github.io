@@ -1,7 +1,6 @@
-import { Graph, NodeEvent, treeToGraphData } from "@antv/g6";
-import axios from "axios";
+// import { Graph, NodeEvent, treeToGraphData } from "@antv/g6";
+// import axios from "axios";
 let treeData;
-
 async function getTreeData() {
   try {
     await axios.get(".././public/datasrc/treeData.json").then((res) => {
@@ -11,9 +10,9 @@ async function getTreeData() {
   } catch {}
 }
 function createTree(data) {
-  const graph = new Graph({
+  const graph = new G6.Graph({
     container: "container",
-    data: treeToGraphData(data),
+    data: G6.treeToGraphData(data),
     autoFit: {
       type: "view",
       options: {
