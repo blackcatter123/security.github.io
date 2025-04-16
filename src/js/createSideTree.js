@@ -5,6 +5,9 @@ async function getTreeData() {
   try {
     await axios.get(".././public/datasrc/treeData.json").then((res) => {
       treeData = res.data;
+            if (error.response.status) {
+        console.log(404);
+      }
       createTree(treeData);
     });
   } catch {}
