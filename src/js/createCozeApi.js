@@ -16,7 +16,7 @@ let coze = new CozeWebSDK.WebChatClient({
   },
   ui: {
     base: {
-      icon: ".././public/photos/Logo2.png",
+      icon: "public/photos/Logo2.png",
       layout: "pc",
     },
   },
