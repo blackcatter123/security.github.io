@@ -10,10 +10,45 @@
     <link rel="stylesheet" href="./src/less/teachKnowledgePage.css" />
     <link rel="stylesheet" href="./src/less/helloPage.css" />
     <link rel="stylesheet" href="./src/less/leftInfoAndAi.css" />
+    <link rel="stylesheet" href="./src/less/hiddenPage.css" />
   </head>
   <body>
     <div id="container_box">
       <div id="container"></div>
+    </div>
+    <div id="hiddenPage">
+      <form class="form">
+        <img src="./public/photos/Seach_icon.png" id="seach_icon" />
+
+        <span class="beforeStart"
+          >在开始之前,我们会进行一个调查,这会有益于我们为你制定学习计划</span
+        >
+        <span class="input-span">
+          <label for="email" class="label">您现在的身份是？</label>
+          <select id="position">
+            <option selected>在校安检专业学生</option>
+            <option>安检在岗工作者</option>
+            <option>社会希望从事安检岗位者</option>
+          </select>
+        </span>
+        <span class="input-span"
+          ><label class="switchQuestion">你希望的学习方式是？</label>
+          <div class="switch_box">
+            <span class="chosenMode">系统学习路线</span>
+            <label class="switch">
+              <input type="checkbox" class="checkbox" />
+              <div class="slider"></div> </label
+            ><span class="chosenMode">自定义探索</span>
+          </div>
+        </span>
+        <span class="span"
+          ><a
+            href="https://baike.baidu.com/item/%E5%AE%89%E6%A3%80%E5%91%98?fromModule=lemma_search-box"
+            >不清楚不同身份的定义？</a
+          ></span
+        >
+        <input class="submit" type="submit" value="选择完毕,开始学习！" />
+      </form>
     </div>
     <div id="knowledge_back">
       <!-- From Uiverse.io by abrahamcalsin -->
@@ -131,8 +166,11 @@
     </div>
   </body>
   <script src="https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/cn/index.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/@antv/g6@5/dist/g6.min.js"></script>
   <script src="./src/js/createCozeApi.js"></script>
   <script type="module" src="./src/js/createSideTree.js"></script>
   <script src="./src/js/main.js"></script>
   <script src="./src/js/enterTeachPage.js"></script>
+  <script src="./src/js/hiddenPage.js"></script>
 </html>
