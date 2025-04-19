@@ -475,10 +475,7 @@ feedbackPage1.addEventListener("submit", (event) => {
   getTreeData(defaultNum);
 });
 
-async function getTreeData(num) {
-  try {
-    await axios.get(".././public/datasrc/treeData.json").then((res) => {
-      treeData = res.data;
+function getTreeData(num) {
       isSystemLearning = num;
       createTree(treeData[num]);
       if (defaultNum == 0) {
@@ -489,7 +486,6 @@ async function getTreeData(num) {
         );
       }
     });
-  } catch {}
 }
 
 function createTree(data) {
