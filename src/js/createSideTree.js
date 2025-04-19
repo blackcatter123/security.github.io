@@ -3,7 +3,7 @@
 let treeData;
 let isSystemLearning;
 
-feedbackPage.addEventListener("submit", (event) => {
+feedbackPage.addEventListener("click", (event) => {
   event.preventDefault();
   console.log(selection.value, defaultNum);
   hiddenPage.style.display = "none";
