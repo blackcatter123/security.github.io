@@ -1,5 +1,5 @@
-import { Graph, NodeEvent, treeToGraphData } from "@antv/g6";
-import axios from "axios";
+// import { Graph, NodeEvent, treeToGraphData } from "@antv/g6";
+// import axios from "axios";
 let treeData;
 let isSystemLearning;
 
