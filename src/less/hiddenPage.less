@@ -18,8 +18,7 @@
   width: 100%;
   max-width: 300px;
   position: relative;
-  top: 25%;
-  left: 10%;
+  animation: merge 1s ease-in-out forwards;
   #seach_icon {
     width: 50px;
     height: 50px;
@@ -34,7 +33,18 @@
     font-size: 1rem;
   }
 }
-
+@keyframes merge {
+  0% {
+    opacity: 0;
+    top: 27%;
+    left: 10%;
+  }
+  100% {
+    opacity: 1;
+    top: 25%;
+    left: 10%;
+  }
+}
 .form .input-span {
   width: 100%;
   display: flex;

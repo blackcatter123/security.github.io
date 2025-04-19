@@ -1,15 +1,33 @@
 import { Graph, NodeEvent, treeToGraphData } from "@antv/g6";
 import axios from "axios";
 let treeData;
+let isSystemLearning;
+let learningArr = [];
 
-async function getTreeData() {
+feedbackPage.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log(selection.value, defaultNum);
+  hiddenPage.style.display = "none";
+  getTreeData(defaultNum);
+});
+
+async function getTreeData(num) {
   try {
     await axios.get(".././public/datasrc/treeData.json").then((res) => {
       treeData = res.data;
-      createTree(treeData);
+      isSystemLearning = num;
+      createTree(treeData[num]);
+      if (defaultNum == 0) {
+        alert("您好！这是我们为您制定的系统学习路径,开始学习吧！");
+      } else {
+        alert(
+          "您好！在自由探索的学习模式中,你可以学习任意你有兴趣或有疑问的知识点"
+        );
+      }
     });
   } catch {}
 }
+
 function createTree(data) {
   const graph = new Graph({
     container: "container",
@@ -43,7 +61,13 @@ function createTree(data) {
         labelBackgroundShadowColor: "black",
         labelBackgroundRadius: 2,
 
-        badge: true, // 是否显示徽标
+        badge: () => {
+          if (isSystemLearning == 1) {
+            return false;
+          } else {
+            return true;
+          }
+        }, // 是否显示徽标
         badges: (e) => {
           if (e.isPass == undefined) {
             return [{ text: "未通过", placement: "right-center" }];
@@ -80,7 +104,7 @@ function createTree(data) {
       state: {
         selected: {
           lineWidth: 2,
-          stroke: "black",
+          stroke: "white",
         },
       },
     },
@@ -172,4 +196,3 @@ function createTree(data) {
   // });
   graph.render();
 }
-getTreeData();

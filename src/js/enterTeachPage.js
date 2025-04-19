@@ -2,7 +2,15 @@ let startBtn = document.querySelector(".start");
 let introduction = document.querySelector(".introduction");
 let teachPage = document.querySelector("#knowledge_box");
 let infoBox = document.querySelector("#leftInfo_box");
-startBtn.addEventListener("click", enterTeachPage);
+
+startBtn.addEventListener("click", () => {
+  if (hiddenPage.style.display == "block") {
+    alert("请完成调查问卷后再尝试！");
+  } else {
+    enterTeachPage();
+  }
+});
+
 function enterTeachPage() {
   introduction.style.display = "none";
   document.querySelector(".dot-spinner").style.display = "block";
