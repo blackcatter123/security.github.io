@@ -485,7 +485,6 @@ function getTreeData(num) {
           "您好！在自由探索的学习模式中,你可以学习任意你有兴趣或有疑问的知识点"
         );
       }
-    });
 }
 
 function createTree(data) {
