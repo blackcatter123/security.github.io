@@ -28,9 +28,9 @@ async function getTreeData(num) {
 }
 
 function createTree(data) {
-  const graph = new Graph({
+  const graph = new G6.Graph({
     container: "container",
-    data: treeToGraphData(data),
+    data: G6.treeToGraphData(data),
     autoFit: {
       type: "view",
       options: {
