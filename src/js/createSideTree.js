@@ -2,10 +2,9 @@
 // import axios from "axios";
 let treeData;
 let isSystemLearning;
-
-feedbackPage.addEventListener("click", (event) => {
+let feedbackPage1 = document.querySelector(".form");
+feedbackPage1.addEventListener("submit", (event) => {
   event.preventDefault();
-  console.log(selection.value, defaultNum);
   hiddenPage.style.display = "none";
   getTreeData(defaultNum);
 });
