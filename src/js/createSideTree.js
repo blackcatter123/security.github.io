@@ -2,7 +2,6 @@ import { Graph, NodeEvent, treeToGraphData } from "@antv/g6";
 import axios from "axios";
 let treeData;
 let isSystemLearning;
-let learningArr = [];
 
 feedbackPage.addEventListener("submit", (event) => {
   event.preventDefault();
