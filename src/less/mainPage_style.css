@@ -45,13 +45,34 @@ body {
   display: none;
 }
 .enterIn {
-  font-size: 0.9rem;
+  display: flex;
+  font-size: 0.8rem;
   font-weight: bold;
-  color: #0050b3;
-  text-decoration: underline;
+  color: #fff;
   margin-top: -10px;
   margin-left: 50%;
+  background-color: #0050b3;
+  border-radius: 0.2rem;
+  justify-content: center;
 }
 .enterIn:hover {
   cursor: pointer;
+}
+.guessLike {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.guessList {
+  display: flex;
+  color: #0050b3;
+  padding: 0.3em 0.1em;
+  border: 1.5px solid #0050b3;
+  border-radius: 0.2rem;
+  margin-top: -0.6rem;
+  justify-content: center;
+}
+.guessList:hover {
+  cursor: pointer;
+  background-color: #0050b3;
+  color: #fff;
 }
