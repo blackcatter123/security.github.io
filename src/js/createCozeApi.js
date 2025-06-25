@@ -9,9 +9,9 @@ let coze = new CozeWebSDK.WebChatClient({
   auth: {
     type: "token",
     token:
-      "pat_wYaRyA0why0gSYu5TlcFMRvWmkkTgmrkD0zI2EI5dF4YWR5rGQ9xiLfMEbqUcJxp",
+      "pat_PlPzo3Ich9o3V7RHD8iWCReniKaNWeCH24jZt1s72uNcIkVEzi7nbg8AtCED7v2l",
     onRefreshToken: function () {
-      return "pat_wYaRyA0why0gSYu5TlcFMRvWmkkTgmrkD0zI2EI5dF4YWR5rGQ9xiLfMEbqUcJxp";
+      return "pat_PlPzo3Ich9o3V7RHD8iWCReniKaNWeCH24jZt1s72uNcIkVEzi7nbg8AtCED7v2l";
     },
   },
   ui: {
